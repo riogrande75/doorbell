@@ -96,8 +96,6 @@ while(1) { //do forever
 	if ( event->len ) {
       		if ( event->mask & IN_CREATE ) {
         		if ( event->mask & IN_ISDIR ) {
-        			wd = inotify_add_watch( fd, "/mnt/disc1/npc/alarm".event->name, IN_CREATE | IN_DELETE );
-				newdir = 
 				printf( "** Doorbutton press was detected **\n");
                                 printf( "New directory %s was created.\n", event->name );
                                 sendudp();
